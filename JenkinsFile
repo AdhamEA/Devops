@@ -1,0 +1,18 @@
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                sh 'pwd'
+            }
+        }
+        stage('ODC'){
+            steps {
+                sh 'mkdir new_folder && ls -al'
+            }
+        }
+    }
+}
